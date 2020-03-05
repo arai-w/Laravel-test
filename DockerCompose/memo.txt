@@ -1,0 +1,4 @@
+cd C:\JOB\DockerCompose
+docker-compose up -d
+
+htmlƒtƒHƒ‹ƒ_‚Éindex.html 
