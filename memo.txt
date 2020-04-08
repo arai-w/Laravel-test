@@ -1,0 +1,8 @@
+サーバ起動方法
+cd C:\JOB\プログラム\Laravel\laravelapp
+php artisan serve
+
+http://127.0.0.1:8000
+
+コントローラ作成
+php artisan make:controller コントローラ名

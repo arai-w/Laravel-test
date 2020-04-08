@@ -14,9 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
-// Route::get('hello',function(){
-//     return '<html><body><h1>Hello</h1><p>This is sample page</p></body></html>';
-// });
+ Route::get('hello',function(){
+     return '<html><body><h1>Hello</h1><p>This is sample page</p></body></html>';
+ });
 Route::get('hello1/{msg}',function($msg)
 {
     $html = <<< EOF
@@ -38,3 +38,9 @@ EOF;
 
     return $html;
 });
+
+Route::get('hello2','HelloController@index');
+
+
+Route::get('hello3','HelloController@index');
+Route::get('hello3/other','HelloController@other');

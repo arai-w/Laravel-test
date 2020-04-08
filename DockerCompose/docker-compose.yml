@@ -8,6 +8,7 @@ services:
     depends_on:
       - app
     volumes:
+      - ../laravelapp/:/var/www/
       - ../laravelapp/public:/var/www/html
       #- ../html:/var/www/html
       - ./docker-nginx/default.conf:/etc/nginx/conf.d/default.conf
@@ -17,6 +18,8 @@ services:
   app:
     build: ./docker-php
     volumes:
+      - ../laravelapp/:/var/www/
       - ../laravelapp/public:/var/www/html
+
       #- ../html:/var/www/html
 

@@ -1,4 +1,4 @@
-cd C:\JOB\DockerCompose
+cd C:\JOB\ãƒ—ãƒ­ã‚°ãƒ©ãƒ \Laravel\DockerCompose
 docker-compose up -d
 
-htmlƒtƒHƒ‹ƒ_‚Éindex.html 
+htmlï¿½tï¿½Hï¿½ï¿½ï¿½_ï¿½ï¿½index.html 
