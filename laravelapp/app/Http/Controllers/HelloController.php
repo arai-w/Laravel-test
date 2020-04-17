@@ -7,31 +7,14 @@ use Illuminate\Http\Response;
 
 class HelloController extends Controller
 {
-    public function index(Request $request, Response $response)
+    public function index()
     {
-        $html = <<< EOF
-        <html>
-        <head>
-        <title>Hello/Index</title>
-        <style>
-        body {font-size:16pt;color:#999;}
-        </style>
-        </head>
-
-        <body>
-            <h1> Hello </h1>
-            <h3>Request</h3>
-            <pre>{$request}</pre>
-            <h3>Response</h3>
-             <pre>{$response}</pre>
-
-        </body>
-        </html>
-        EOF;
-
-        $response->setContent($html);
-        
-        return $response;
+        $data=['one','two','three'];
+        return view('hello.index',['data'=>$data]);
+    }
+    public function post(Request $request)
+    {
+        return view('hello.index',['msg'=>$request->msg]);
     }
 
 }

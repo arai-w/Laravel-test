@@ -13,34 +13,40 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
- Route::get('hello',function(){
-     return '<html><body><h1>Hello</h1><p>This is sample page</p></body></html>';
  });
-Route::get('hello1/{msg}',function($msg)
-{
-    $html = <<< EOF
-<html>
-<head>
-<title>Hello</title>
-<style>
-body {font-size:16pt;color:#999;}
-</style>
+//  Route::get('hello',function(){
+//      return '<html><body><h1>Hello</h1><p>This is sample page</p></body></html>';
+//  });
+// Route::get('hello1/{msg}',function($msg)
+// {
+//     $html = <<< EOF
+// <html>
+// <head>
+// <title>Hello</title>
+// <style>
+// body {font-size:16pt;color:#999;}
+// </style>
 
-<body>
-    <h1> Hello </h1>
-    <p>{$msg}</p>
-</body>
+// <body>
+//     <h1> Hello </h1>
+//     <p>{$msg}</p>
+// </body>
 
-</head>
-</html>
-EOF;
+// </head>
+// </html>
+// EOF;
 
-    return $html;
-});
+//     return $html;
+// });
 
-Route::get('hello2','HelloController@index');
+// Route::get('hello2','HelloController@index');
 
 
-Route::get('hello3','HelloController@index');
-Route::get('hello3/other','HelloController@other');
+// Route::get('hello3','HelloController@index');
+// Route::get('hello3/other','HelloController@other');
+// Route::get('hello4',function(){
+//     return view('hello.index');
+// });
+
+Route::post('hello','HelloController@post');
+Route::get('hello','HelloController@index');
