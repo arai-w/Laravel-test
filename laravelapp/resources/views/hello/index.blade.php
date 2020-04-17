@@ -7,17 +7,8 @@
 @endsection
 
 @section('content')
-    <p>本文コンテンツ</p>
-    <p>必要なだけ記述</p>
-    @component('components.message')
-        @slot('msg_title')
-        CAUTION!
-        @endslot
-
-        @slot('msg_content')
-        メッセージ表示
-        @endslot
-    @endcomponent
+    @include('components.message'
+       ,['msg_title'=>'OK','msg_content'=>'サブビュー'])
 
 @endsection
 
