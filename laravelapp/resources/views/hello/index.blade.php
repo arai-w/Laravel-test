@@ -7,9 +7,11 @@
 @endsection
 
 @section('content')
-    @include('components.message'
-       ,['msg_title'=>'OK','msg_content'=>'サブビュー'])
-
+    <p>本文コンテンツ</p>
+    <p>必要なだけ記述</p>
+   
+   <p>Controller value<br>  'message'={{$message}} </p> 
+    <p>ViewComposer value<br> 'view_message'={{$view_message}}</p>
 @endsection
 
 @section('content2')
