@@ -10,8 +10,15 @@
     <p>本文コンテンツ</p>
     <p>必要なだけ記述</p>
    
-   <p>Controller value<br>  'message'={{$message}} </p> 
-    <p>ViewComposer value<br> 'view_message'={{$view_message}}</p>
+    <table>
+    @foreach($items as $item)
+        <tr>
+        <!-- <td>{{$item->syh_kai_cd}}</td>     -->
+        <td>{{$item->syh_cd}}</td>    
+        <td>{{$item->syh_mei}}</td>   
+        </tr>
+    @endforeach
+    </table>
 @endsection
 
 @section('content2')
