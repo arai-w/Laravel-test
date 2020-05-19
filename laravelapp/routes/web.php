@@ -50,3 +50,5 @@ Route::get('/', function () {
 
 Route::post('hello','HelloController@post');
 Route::get('hello','HelloController@index');
+
+Route::get('hello/add','HelloController@addSyohin');
